@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SampleImageEditor" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Swl-de-TVO">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <navigationItem title="Choose an image" id="HUd-08-h4a">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="bLc-3C-J3m">
+                                            <connections>
+                                                <action selector="openLibrary:" destination="BYZ-38-t0r" id="AcV-kK-FFA"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nuq-Mz-2z8">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yAJ-Jl-4s7">
+                                        <rect key="frame" x="0.0" y="221.5" width="414" height="331"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="331" id="gkM-Nn-cYS"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="yAJ-Jl-4s7" firstAttribute="centerX" secondItem="nuq-Mz-2z8" secondAttribute="centerX" id="95n-a7-6SJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="yAJ-Jl-4s7" secondAttribute="trailing" id="K2A-Lb-YBy"/>
+                                    <constraint firstItem="yAJ-Jl-4s7" firstAttribute="centerY" secondItem="nuq-Mz-2z8" secondAttribute="centerY" id="gSZ-UD-vwu"/>
+                                    <constraint firstItem="yAJ-Jl-4s7" firstAttribute="leading" secondItem="nuq-Mz-2z8" secondAttribute="leading" id="gtU-sy-PO4"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Swl-de-TVO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BfV-Si-n1f"/>
+                            <constraint firstItem="Swl-de-TVO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="C3J-Hn-P4R"/>
+                            <constraint firstItem="nuq-Mz-2z8" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Mui-ox-hy6"/>
+                            <constraint firstItem="Swl-de-TVO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="a1a-di-uSD"/>
+                            <constraint firstItem="nuq-Mz-2z8" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="clC-BD-utc"/>
+                            <constraint firstItem="nuq-Mz-2z8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="lCC-p0-Puo"/>
+                            <constraint firstItem="nuq-Mz-2z8" firstAttribute="top" secondItem="Swl-de-TVO" secondAttribute="bottom" id="v3u-D1-ARo"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="sDx-cs-XsO"/>
+                    <connections>
+                        <outlet property="imageView" destination="yAJ-Jl-4s7" id="mkt-sM-byB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1059.4202898550725" y="-163.39285714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
